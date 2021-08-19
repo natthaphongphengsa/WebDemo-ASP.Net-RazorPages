@@ -1,0 +1,19 @@
+﻿@page
+@model TestDemo.Pages.RandomNumberModel
+@{
+    <h1>Time: @Model.datetime</h1>
+    if (Model.Number > 200000)
+    {
+        <h1>Stor nummer</h1>
+    }
+    else if (Model.Number > 100000)
+    {
+        <h1>Ganska stor nummer</h1>
+    }
+    else
+    {
+        <h1>Litet nummer</h1>
+    }
+}
+<a class="align-content-center" asp-page="/Player">Till Listan</a>
+

@@ -1,0 +1,11 @@
+﻿@page
+@model TestDemo.Pages.PlayerModel
+@{
+    foreach (var player in Model.player)
+    {
+        <ul>
+            <li>@player</li>
+        </ul>
+    }
+}
+<a class="align-content-center" asp-page="/RandomNumber">Till Random</a>

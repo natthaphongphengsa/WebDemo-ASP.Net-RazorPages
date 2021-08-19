@@ -1,0 +1,30 @@
+﻿@page
+@model TestDemo.Pages.NewsModel
+@{
+    <table class="table">
+        @*<thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>*@
+        <tbody>
+            @foreach (TestDemo.Pages.News news in Model.news)
+            {
+                <tr>
+
+                    <th scope="row">1</th>
+                    <td>@news.Title</td>
+                    <td><img src="@news.Image" /></td>
+                    <td>@news.description</td>
+                    <td>
+                        <a href="@news.Link"></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+}

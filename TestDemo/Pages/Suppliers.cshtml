@@ -1,0 +1,57 @@
+﻿@page
+@model TestDemo.Pages.SuppliesModel
+@{
+    var list = new List<string>();
+    list.Add("Natta");
+    list.Add("Henrik");
+    list.Add("Sarah");
+}
+<h1>Hello there!</h1>
+@foreach (var Names in list)
+{
+    <li>@Names</li>
+    @if (Names == "Henrik")
+    {
+        <li><b>@Names</b> = No 1</li>
+    }
+    else
+    {
+        @Names
+    }
+
+}
+@*<ul>
+        @for (int i = 0; i < 10; i++)
+        {
+            <li>@i</li>
+        }
+    </ul>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>twitter</td>
+        </tr>
+    </tbody>
+</table>
