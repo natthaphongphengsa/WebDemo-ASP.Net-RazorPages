@@ -1,0 +1,26 @@
+﻿@page
+@model TestDemo.Pages.articlesModel
+
+<div class="container">
+    @if (Model.articles != null)
+    {
+        @foreach (var article in Model.articles)
+        {
+            <div class="col" style=" margin:3px; padding:22px; background-color: #fff; border: none; -webkit-box-shadow: 0 0.125rem 0.8rem rgb(0 0 0 / 10%); box-shadow: 0 0.125rem 0.8rem rgb(0 0 0 / 10%); border-radius: 1rem;">
+
+                <b>@article.Title</b>
+                <p>@article.Datum</p>
+                <a href="@article.LinkUrl">
+                    <image src="@article.ImageUrl" alt="@article.Title" width="100%" style="border-radius:12px"></image>
+                </a>
+                <p>@article.Text</p>
+                <a asp-page="/showarticle" asp-route-id="@article.Id">Read more</a>
+            </div>
+        }
+
+    }
+    else
+    {
+        <h1 class="container align-content-center">Empty!</h1>
+    }
+</div>

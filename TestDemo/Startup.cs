@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestDemo.Interfaces;
+using TestDemo.Model;
+using TestDemo.Services;
 
 namespace TestDemo
 {
@@ -23,6 +26,8 @@ namespace TestDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IKrisInfoService, KrisInfoService>();
+            services.AddTransient<ILotteryService, LotteryService>();
             services.AddRazorPages();
         }
 

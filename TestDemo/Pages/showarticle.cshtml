@@ -1,0 +1,15 @@
+﻿@page
+@model TestDemo.Pages.showarticleModel
+@{
+}
+<div class="container">
+    <div class="row align-items-start p-3 border-white mb-4" style="background-color: #fff; border: none; -webkit-box-shadow: 0 0.125rem 0.8rem rgb(0 0 0 / 10%); box-shadow: 0 0.125rem 0.8rem rgb(0 0 0 / 10%); border-radius: 1rem;">
+        <div class="col" style="min-height: 300px;">
+            <b style="display:grid; padding:12px">@Model.Title</b>
+            <a href="@Model.LinkUrl">
+                <image src="@Model.ImageUrl" alt="@Model.Title" width="100%"></image>
+            </a>
+            <p style="display: block; padding: 12px">@Model.Text</p>
+        </div>
+    </div>
+</div>
